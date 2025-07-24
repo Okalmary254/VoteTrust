@@ -1,0 +1,33 @@
+{
+  "dfx": "0.18.0",
+  "canisters": {
+    "voter_registry": {
+      "main": "backend/voter_registry/main.mo",
+      "type": "motoko"
+    },
+    "voting": {
+      "main": "backend/voting/main.mo",
+      "type": "motoko"
+    },
+    "results": {
+      "main": "backend/results/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "type": "persistent",
+      "providers": ["https://ic0.app"]
+    }
+  },
+  "output_env_file": ".env.local"
+}
